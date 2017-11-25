@@ -1,20 +1,14 @@
-console.log("The Bot Is Starting...");
+console.log("The bot is starting up...");
 
-var Twit = require('twit');
+const Twit = require('twit'); //We need twit before we can access some of twitters functions
 
-var config = require('./config');
+const config = require('./config.json'); //Our config holds the needed details
 
-var T = new Twit(config);
-console.log("Loaded The Bot Config");
-
-var params = {
-  q: 'Trump since:2016-07-11',
-  count: 100
-}
-
-T.get('search/tweets', params gotData);
-
-function gotData(err, data, response) {
-  console.log(data);
-})
-
+const T = new Twit({
+  consumer_key:         config.consumer_key,
+  consumer_secret:      config.consumer_secret,
+  access_token:         config.access_token,
+  access_token_secret:  config.access_token_secret,
+  timeout_ms:           60*1000, //Optional HTTP request timeout to apply to all requests.
+});
+console.log("");
