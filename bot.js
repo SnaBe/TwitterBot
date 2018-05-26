@@ -2,6 +2,8 @@
 const Twit = require('twit');
 //Pull our Twitter account info from our config.
 const config = require('./config.json');
+//Twitter will not allow duped tweets, this variable is used to add a number to our tweet.
+var tweetNr = 0;
 //Our Twit object, client. Used for connecting to the api.
 const client = new Twit(config);
 //Start our tweetIt function once the bot is launched.
@@ -12,8 +14,10 @@ setInterval(tweetIt, 3600000);
 function tweetIt() {
   //Array with possible tweets
   var tweetArray = ["Wow, what a nice day!", "Twit is such a nice node package.", "Where would I be without Github?"];
-  //Choose a random part of the array and set it as our tweet variable.
-  var tweet = tweetArray[Math.floor(Math.random() * tweetArray.length) + 0];
+  //Add 1 to our tweet number.
+  tweetNr += 1;
+  //Choose a random part of the array and set it as our tweet variable and add #MyTweet with our number.
+  var tweet = tweetArray[Math.floor(Math.random() * tweetArray.length) + 0] + " #MyTweet" + tweetNr;
   //Post our tweet
   client.post('statuses/update', { status: tweet }, tweeted);
   //Callback for when the tweet is tweeted.
