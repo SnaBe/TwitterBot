@@ -7,6 +7,7 @@ Before you can run the bot, you'll need the required node packages. (node module
 But how do you install them? Don't worry, I'll show you.
 
 1. Locate the folder
+
 Find the donwloaded folder, place it somewhere new and extract the files.
 ```
 cd C:\Users\WINDOWS_USER\YOUR_FOLDER_LOCATION
