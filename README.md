@@ -10,7 +10,11 @@ But how do you install them? Don't worry, I'll show you.
 Find the donwloaded folder, place it somewhere new and extract the files.
 
 2. Install the required packages
+```
 npm install twit
+```
 
 3. Run the bot
+```
 node bot.js
+```
