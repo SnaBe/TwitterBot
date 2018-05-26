@@ -8,6 +8,9 @@ But how do you install them? Don't worry, I'll show you.
 
 1. Locate the folder
 Find the donwloaded folder, place it somewhere new and extract the files.
+```
+cd C:\Users\WINDOWS_USER\Desktop\YOUR_FOLDER_LOCATION
+```
 
 2. Install the required packages
 ```
