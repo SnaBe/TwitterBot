@@ -5,7 +5,7 @@ A Twitter bot controls a Twitter account via the Twitter API. The bot can perfor
 ### What does this Twitter bot do?
 The bot tweets a random fact, joke/meme etc. every hour. (Edit them in bot.js) I'm planning to make it more advanced, with more cool features coming in the near future. 
 
-### How to get up and running?
+### How to get it up and running?
 Before you can run the bot, you'll need the required node packages. (node modules).
 But how do you install them? Don't worry, I'll show you.
 
